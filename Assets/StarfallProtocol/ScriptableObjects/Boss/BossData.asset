@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3dfc2a186c3554459cf246995a020d3, type: 3}
+  m_Name: BossData
+  m_EditorClassIdentifier: Assembly-CSharp::StarfallProtocol.Boss.BossData
+  maxHealth: 60
+  scoreValue: 500
+  phaseThreshold: 0.5
+  entrySpeed: 1.5
+  stopYPosition: 3
+  horizontalDriftSpeed: 0.5
+  horizontalDriftRange: 2
+  phase1FireRate: 0.5
+  phase1ProjectileSpeed: 6
+  phase1Damage: 1
+  phase2FireRate: 1.2
+  phase2ProjectileSpeed: 8
+  phase2Damage: 1
