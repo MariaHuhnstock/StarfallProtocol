@@ -12,6 +12,11 @@ namespace StarfallProtocol.Player
         private Camera _mainCamera;
         private Vector2 _moveInput;
 
+        private float _moveSpeedMultiplier = 1f;
+        private float _magnetRadius = 0f;
+
+        public float MagnetRadius => _magnetRadius;
+
         private void Awake()
         {
             _rb = GetComponent<Rigidbody2D>();
@@ -26,7 +31,8 @@ namespace StarfallProtocol.Player
 
         private void FixedUpdate()
         {
-            Vector2 newPosition = _rb.position + _moveInput.normalized * _moveSpeed * Time.fixedDeltaTime;
+            float currentSpeed = _moveSpeed * _moveSpeedMultiplier;
+            Vector2 newPosition = _rb.position + _moveInput.normalized * currentSpeed * Time.fixedDeltaTime;
             newPosition = ClampToScreen(newPosition);
             _rb.MovePosition(newPosition);
         }
@@ -39,6 +45,16 @@ namespace StarfallProtocol.Player
 
             Vector3 clampedWorld = _mainCamera.ViewportToWorldPoint(viewportPos);
             return new Vector2(clampedWorld.x, clampedWorld.y);
+        }
+
+        public void AddMoveSpeedMultiplier(float amount)
+        {
+            _moveSpeedMultiplier += amount;
+        }
+
+        public void AddMagnetRadius(float amount)
+        {
+            _magnetRadius += amount;
         }
     }
 }

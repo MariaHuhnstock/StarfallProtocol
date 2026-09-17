@@ -9,9 +9,11 @@ namespace StarfallProtocol.Player
         [SerializeField] private int _maxHealth = 5;
 
         private int _currentHealth;
+        private int _shieldCharges;
 
         public int CurrentHealth => _currentHealth;
         public int MaxHealth => _maxHealth;
+        public int ShieldCharges => _shieldCharges;
 
         private void Awake()
         {
@@ -20,6 +22,12 @@ namespace StarfallProtocol.Player
 
         public void TakeDamage(int amount)
         {
+            if (_shieldCharges > 0)
+            {
+                _shieldCharges--;
+                return;
+            }
+
             _currentHealth -= amount;
 
             if (_currentHealth <= 0)
@@ -28,9 +36,13 @@ namespace StarfallProtocol.Player
             }
         }
 
+        public void AddShield(int amount)
+        {
+            _shieldCharges += amount;
+        }
+
         private void Die()
         {
-            // GameManager wird das im nächsten Schritt abfangen und Game Over auslösen.
             GameManager.Instance?.TriggerGameOver();
         }
     }

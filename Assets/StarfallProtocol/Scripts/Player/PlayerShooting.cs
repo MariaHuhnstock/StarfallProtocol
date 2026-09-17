@@ -15,6 +15,7 @@ namespace StarfallProtocol.Player
 
         private float _fireTimer;
         private bool _doubleShotActive;
+        private float _fireRateMultiplier = 1f;
 
         private void Update()
         {
@@ -23,7 +24,7 @@ namespace StarfallProtocol.Player
             if (Input.GetButton("Fire1") && _fireTimer <= 0f)
             {
                 Shoot();
-                _fireTimer = 1f / _weaponData.fireRate;
+                _fireTimer = 1f / (_weaponData.fireRate * _fireRateMultiplier);
             }
         }
 
@@ -50,10 +51,14 @@ namespace StarfallProtocol.Player
             );
         }
 
-        /// <summary>Wird vom DoubleShotUpgrade aufgerufen.</summary>
         public void SetDoubleShot(bool active)
         {
             _doubleShotActive = active;
+        }
+
+        public void AddFireRateMultiplier(float amount)
+        {
+            _fireRateMultiplier += amount;
         }
     }
 }

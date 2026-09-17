@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::StarfallProtocol.Enemies.EnemyData
   maxHealth: 4
   moveSpeed: 2
-  scoreValue: 10
+  scoreValue: 20
   patternType: 2
