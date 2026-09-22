@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 9095495563980603286}
   - component: {fileID: 4405014520028784827}
   - component: {fileID: 3693752293857614101}
+  - component: {fileID: -7732931190130499601}
   m_Layer: 7
   m_Name: Enemy_Weaver
   m_TagString: Untagged
@@ -181,3 +182,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-7732931190130499601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959438307566619523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3626f733ed1fc34ca55c9a74628e0e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyEarthCollision
+  damageToEarth: 6

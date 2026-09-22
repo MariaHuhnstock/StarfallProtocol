@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using StarfallProtocol.Weapons;
 using StarfallProtocol.Core;
@@ -15,9 +16,12 @@ namespace StarfallProtocol.Player
         public int MaxHealth => _maxHealth;
         public int ShieldCharges => _shieldCharges;
 
+        public event Action<float> OnHealthChanged;
+
         private void Awake()
         {
             _currentHealth = _maxHealth;
+            OnHealthChanged?.Invoke((float)_currentHealth / _maxHealth);
         }
 
         public void TakeDamage(int amount)
@@ -29,6 +33,7 @@ namespace StarfallProtocol.Player
             }
 
             _currentHealth -= amount;
+            OnHealthChanged?.Invoke((float)_currentHealth / _maxHealth);
 
             if (_currentHealth <= 0)
             {

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3563674901351658817}
   - component: {fileID: 5629681993360215565}
   - component: {fileID: 71491173163741684}
+  - component: {fileID: -7427184732461332921}
   m_Layer: 7
   m_Name: Enemy_Rusher
   m_TagString: Untagged
@@ -171,3 +172,16 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: -0.012593746, y: -2.8334827}
   m_Radius: 5.885374
+--- !u!114 &-7427184732461332921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 186353650014166174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3626f733ed1fc34ca55c9a74628e0e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyEarthCollision
+  damageToEarth: 8
