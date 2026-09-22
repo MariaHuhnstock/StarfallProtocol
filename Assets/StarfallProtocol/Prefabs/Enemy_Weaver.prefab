@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4405014520028784827}
   - component: {fileID: 3693752293857614101}
   - component: {fileID: -7732931190130499601}
+  - component: {fileID: 777848084995661848}
   m_Layer: 7
   m_Name: Enemy_Weaver
   m_TagString: Untagged
@@ -126,7 +127,7 @@ EdgeCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -194,4 +195,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3626f733ed1fc34ca55c9a74628e0e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyEarthCollision
-  damageToEarth: 6
+  enemyData: {fileID: 11400000, guid: 04116796d7243fc429138d2012efc573, type: 2}
+--- !u!114 &777848084995661848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959438307566619523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d1e6555c08a40944aa6ce84a752cf7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StarfallProtocol.Enemies.EnemyPlayerCollision
+  contactDamage: 1

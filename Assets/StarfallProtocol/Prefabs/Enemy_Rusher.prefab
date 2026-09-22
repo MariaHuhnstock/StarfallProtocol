@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5629681993360215565}
   - component: {fileID: 71491173163741684}
   - component: {fileID: -7427184732461332921}
+  - component: {fileID: 4462305257696839490}
   m_Layer: 7
   m_Name: Enemy_Rusher
   m_TagString: Untagged
@@ -184,4 +185,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3626f733ed1fc34ca55c9a74628e0e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyEarthCollision
-  damageToEarth: 8
+  enemyData: {fileID: 11400000, guid: 0648dcb55b019284b84117c841b32b06, type: 2}
+--- !u!114 &4462305257696839490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 186353650014166174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d1e6555c08a40944aa6ce84a752cf7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StarfallProtocol.Enemies.EnemyPlayerCollision
+  contactDamage: 2

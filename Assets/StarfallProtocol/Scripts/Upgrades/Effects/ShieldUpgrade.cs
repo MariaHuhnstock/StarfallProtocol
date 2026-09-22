@@ -2,12 +2,14 @@ using StarfallProtocol.Player;
 
 namespace StarfallProtocol.Upgrades
 {
-    /// <summary>Gibt dem Spieler einen zusätzlichen Schild-Treffer, der Schaden absorbiert.</summary>
     public class ShieldUpgrade : IUpgradeEffect
     {
+        private readonly int _amount;
+        public ShieldUpgrade(int amount) { _amount = amount; }
+
         public void Apply(PlayerContext context)
         {
-            context.Health.AddShield(1);
+            context.Health.AddShield(_amount);
         }
     }
 }

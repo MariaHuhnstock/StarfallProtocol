@@ -21,14 +21,18 @@ namespace StarfallProtocol.Upgrades
         [Tooltip("Falls deaktiviert, kann dieses Upgrade nur einmal ausgewählt werden.")]
         public bool isStackable = true;
 
+        [Header("Effect Value")]
+        [Tooltip("FireRate/Speed: prozentualer Bonus (0.15 = +15%). Shield: Anzahl Ladungen (abgerundet). DoubleShot: ungenutzt.")]
+        public float value = 0.15f;
+
         public IUpgradeEffect CreateEffect()
         {
             switch (type)
             {
-                case UpgradeType.FireRate: return new FireRateUpgrade();
+                case UpgradeType.FireRate: return new FireRateUpgrade(value);
                 case UpgradeType.DoubleShot: return new DoubleShotUpgrade();
-                case UpgradeType.Shield: return new ShieldUpgrade();
-                case UpgradeType.Speed: return new SpeedUpgrade();
+                case UpgradeType.Shield: return new ShieldUpgrade(Mathf.RoundToInt(value));
+                case UpgradeType.Speed: return new SpeedUpgrade(value);
                 default: return null;
             }
         }

@@ -2,12 +2,14 @@ using StarfallProtocol.Player;
 
 namespace StarfallProtocol.Upgrades
 {
-    /// <summary>Erhöht die Feuerrate um 25% (stackt bei mehrfacher Auswahl).</summary>
     public class FireRateUpgrade : IUpgradeEffect
     {
+        private readonly float _amount;
+        public FireRateUpgrade(float amount) { _amount = amount; }
+
         public void Apply(PlayerContext context)
         {
-            context.Shooting.AddFireRateMultiplier(0.25f);
+            context.Shooting.AddFireRateMultiplier(_amount);
         }
     }
 }

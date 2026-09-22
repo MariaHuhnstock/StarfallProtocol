@@ -15,4 +15,5 @@ MonoBehaviour:
   maxHealth: 4
   moveSpeed: 2
   scoreValue: 20
+  earthDamage: 15
   patternType: 2

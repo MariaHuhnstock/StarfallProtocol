@@ -2,12 +2,14 @@ using StarfallProtocol.Player;
 
 namespace StarfallProtocol.Upgrades
 {
-    /// <summary>Erhöht die Bewegungsgeschwindigkeit um 15% (stackt).</summary>
     public class SpeedUpgrade : IUpgradeEffect
     {
+        private readonly float _amount;
+        public SpeedUpgrade(float amount) { _amount = amount; }
+
         public void Apply(PlayerContext context)
         {
-            context.Controller.AddMoveSpeedMultiplier(0.15f);
+            context.Controller.AddMoveSpeedMultiplier(_amount);
         }
     }
 }

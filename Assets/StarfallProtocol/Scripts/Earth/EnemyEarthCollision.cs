@@ -1,15 +1,16 @@
 using UnityEngine;
+using StarfallProtocol.Enemies;
 
 public class EnemyEarthCollision : MonoBehaviour
 {
-    [SerializeField] private int damageToEarth = 10;
+    [SerializeField] private EnemyData enemyData;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.TryGetComponent<EarthHealth>(out var earth))
         {
-            earth.TakeDamage(damageToEarth);
-            // zurück ins Object Pool statt Destroy(), passend zu eurem System
+            Debug.Log($"{gameObject.name} hit earth");
+            earth.TakeDamage(enemyData.earthDamage);
             gameObject.SetActive(false);
         }
     }

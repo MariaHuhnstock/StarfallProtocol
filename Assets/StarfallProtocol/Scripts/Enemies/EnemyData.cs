@@ -9,6 +9,7 @@ namespace StarfallProtocol.Enemies
         public int maxHealth = 3;
         public float moveSpeed = 2f;
         public int scoreValue = 10;
+        public int earthDamage = 5;
 
         [Header("Movement Pattern")]
         [Tooltip("Muss den Namen einer MovementPattern-Klasse referenzieren, z. B. 'Drifter'.")]

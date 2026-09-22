@@ -10,14 +10,17 @@ namespace StarfallProtocol.Upgrades
         [SerializeField] private UpgradeData[] _allUpgrades;
         [SerializeField] private UpgradeSelectUI _upgradeSelectUI;
         [SerializeField] private UpgradeInventory _upgradeInventory;
-        [SerializeField] private int _scoreInterval = 500;
+        [SerializeField] private int _scoreInterval = 50;
+        [SerializeField] private int _thresholdGrowth = 40;
 
+        private int _currentInterval;
         private int _nextThreshold;
         private readonly HashSet<UpgradeType> _acquiredNonStackable = new HashSet<UpgradeType>();
 
         private void Start()
         {
-            _nextThreshold = _scoreInterval;
+            _currentInterval = _scoreInterval;
+            _nextThreshold = _currentInterval;
         }
 
         private void Update()
@@ -26,7 +29,8 @@ namespace StarfallProtocol.Upgrades
 
             if (ScoreManager.Instance.CurrentScore >= _nextThreshold)
             {
-                _nextThreshold += _scoreInterval;
+                _currentInterval += _thresholdGrowth;
+                _nextThreshold += _currentInterval;
                 TriggerUpgradeSelection();
             }
         }
@@ -35,7 +39,7 @@ namespace StarfallProtocol.Upgrades
         {
             List<UpgradeData> availablePool = GetAvailableUpgrades();
 
-            if (availablePool.Count == 0) return; // Nichts mehr anzubieten (alle Non-Stackables vergeben)
+            if (availablePool.Count == 0) return;
 
             List<UpgradeData> choices = GetRandomUpgrades(availablePool, 3);
             Time.timeScale = 0f;

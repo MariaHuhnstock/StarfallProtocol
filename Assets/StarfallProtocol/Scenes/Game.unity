@@ -898,7 +898,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a4b198bd791e6c4e9fc8bf0d695f032, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EarthHealth
-  maxHealth: 30
+  maxHealth: 100
 --- !u!1 &342195319
 GameObject:
   m_ObjectHideFlags: 0
@@ -1797,6 +1797,7 @@ MonoBehaviour:
   _upgradeSelectUI: {fileID: 2052665018}
   _upgradeInventory: {fileID: 1702987182}
   _scoreInterval: 50
+  _thresholdGrowth: 25
 --- !u!1 &823510306
 GameObject:
   m_ObjectHideFlags: 0
