@@ -1150,7 +1150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.9490196}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.9019608}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1864,7 +1864,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.5764706}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4057,6 +4057,123 @@ MonoBehaviour:
   _controller: {fileID: 1702987179}
   _shooting: {fileID: 1702987177}
   _health: {fileID: 1702987178}
+--- !u!60 &1702987187
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1702987174}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.28, y: 2.94}
+    newSize: {x: 4.28, y: 2.94}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.66999996, y: -1.22}
+      - {x: 0.78999996, y: -1.25}
+      - {x: 0.85999995, y: -1.14}
+      - {x: 0.95, y: -0.98999995}
+      - {x: 0.96999997, y: -0.94}
+      - {x: 1.9, y: -0.94}
+      - {x: 1.93, y: -0.91999996}
+      - {x: 2, y: -0.83}
+      - {x: 2.1399999, y: -0.59999996}
+      - {x: 2.1399999, y: -0.56}
+      - {x: 2.1299999, y: -0.53999996}
+      - {x: 1.5999999, y: -0.19999999}
+      - {x: 1.4399999, y: -0.099999994}
+      - {x: 1.4399999, y: 0.19}
+      - {x: 1.42, y: 0.29}
+      - {x: 1.35, y: 0.39999998}
+      - {x: 1.22, y: 0.52}
+      - {x: 1.2099999, y: 0.52}
+      - {x: 1.0699999, y: 0.38}
+      - {x: 0.96, y: 0.22}
+      - {x: 0.85999995, y: 0.29}
+      - {x: 0.39999998, y: 0.58}
+      - {x: 0.39999998, y: 1.03}
+      - {x: 0.31, y: 1.22}
+      - {x: 0.26, y: 1.28}
+      - {x: 0.14, y: 1.39}
+      - {x: 0.02, y: 1.4699999}
+      - {x: -0.04, y: 1.4699999}
+      - {x: -0.25, y: 1.31}
+      - {x: -0.32999998, y: 1.22}
+      - {x: -0.38, y: 1.13}
+      - {x: -0.41, y: 1.06}
+      - {x: -0.41, y: 0.58}
+      - {x: -0.45, y: 0.57}
+      - {x: -0.51, y: 0.53}
+      - {x: -0.71, y: 0.39999998}
+      - {x: -0.96999997, y: 0.22999999}
+      - {x: -1, y: 0.19999999}
+      - {x: -1.01, y: 0.28}
+      - {x: -1.09, y: 0.41}
+      - {x: -1.22, y: 0.52}
+      - {x: -1.23, y: 0.52}
+      - {x: -1.37, y: 0.38}
+      - {x: -1.42, y: 0.29}
+      - {x: -1.4399999, y: 0.22999999}
+      - {x: -1.4399999, y: -0.08}
+      - {x: -1.52, y: -0.12}
+      - {x: -1.5699999, y: -0.17}
+      - {x: -1.7199999, y: -0.26}
+      - {x: -1.78, y: -0.29999998}
+      - {x: -1.9799999, y: -0.42999998}
+      - {x: -2.1399999, y: -0.55}
+      - {x: -2.1399999, y: -0.59999996}
+      - {x: -1.93, y: -0.90999997}
+      - {x: -1.89, y: -0.94}
+      - {x: -0.98999995, y: -0.94}
+      - {x: -0.98999995, y: -0.95}
+      - {x: -0.93, y: -1.06}
+      - {x: -0.84, y: -1.2099999}
+      - {x: -0.78999996, y: -1.27}
+      - {x: -0.74, y: -1.26}
+      - {x: -0.64, y: -1.23}
+      - {x: -0.51, y: -1.1899999}
+      - {x: -0.37, y: -1.16}
+      - {x: -0.19, y: -1.3399999}
+      - {x: -0.02, y: -1.4699999}
+      - {x: 0.01, y: -1.4699999}
+      - {x: 0.07, y: -1.42}
+      - {x: 0.35999998, y: -1.16}
+      - {x: 0.39999998, y: -1.14}
+  m_UseDelaunayMesh: 1
 --- !u!1 &1821509185
 GameObject:
   m_ObjectHideFlags: 0
@@ -4332,7 +4449,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::StarfallProtocol.Boss.BossSpawner
   _bossPrefab: {fileID: 2615995436485111788, guid: 5749d4fe094c9c8439e55ccd32b46609, type: 3}
   _spawnPoint: {fileID: 1175954327}
-  _spawnDelaySeconds: 30
+  _spawnDelaySeconds: 240
   _bossProjectilePool: {fileID: 75710651}
 --- !u!1 &1901507206
 GameObject:
@@ -4853,7 +4970,7 @@ Canvas:
   m_UseReflectionProbes: 0
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: -65402863
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!224 &2052665017
@@ -4987,13 +5104,17 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4207227942933047031, guid: c2a0d2f4e61c1a8439b4fb2589f08ebe, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6756239420721069608, guid: c2a0d2f4e61c1a8439b4fb2589f08ebe, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1702987182}
+    - targetCorrespondingSourceObject: {fileID: 6756239420721069608, guid: c2a0d2f4e61c1a8439b4fb2589f08ebe, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1702987187}
   m_SourcePrefab: {fileID: 100100000, guid: c2a0d2f4e61c1a8439b4fb2589f08ebe, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

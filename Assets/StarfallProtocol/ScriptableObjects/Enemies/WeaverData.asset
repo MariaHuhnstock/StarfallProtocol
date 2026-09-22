@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 384a256d1ef4f0149b1b47d204e4c28c, type: 3}
   m_Name: WeaverData
   m_EditorClassIdentifier: Assembly-CSharp::StarfallProtocol.Enemies.EnemyData
-  maxHealth: 60
+  maxHealth: 3
   moveSpeed: 2
-  scoreValue: 500
+  scoreValue: 12
   earthDamage: 0
   patternType: 1
